@@ -1,0 +1,5 @@
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\bin\Assignment2.dll.config
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\bin\Assignment2.dll
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\bin\Assignment2.pdb
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\obj\Debug\Assignment2.dll
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\obj\Debug\Assignment2.pdb
