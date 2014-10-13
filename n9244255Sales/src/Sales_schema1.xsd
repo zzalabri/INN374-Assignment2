@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://sales/" xmlns:tns="http://sales/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="acceptQuote" type="tns:acceptQuote"/>
+
+  <xs:element name="acceptQuoteResponse" type="tns:acceptQuoteResponse"/>
+
+  <xs:element name="inStock" type="tns:inStock"/>
+
+  <xs:element name="inStockResponse" type="tns:inStockResponse"/>
+
+  <xs:element name="reject" type="tns:reject"/>
+
+  <xs:element name="rejectResponse" type="tns:rejectResponse"/>
+
+  <xs:element name="request" type="tns:request"/>
+
+  <xs:element name="requestResponse" type="tns:requestResponse"/>
+
+  <xs:complexType name="acceptQuote">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acceptQuoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:delay" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="delay">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="delay" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="reject">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rejectResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="request">
+    <xs:sequence>
+      <xs:element name="customer" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="requestResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:quote" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="quote">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="price" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inStock">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="inStockResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+
