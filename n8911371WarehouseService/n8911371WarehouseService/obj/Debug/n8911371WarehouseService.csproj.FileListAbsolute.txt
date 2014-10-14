@@ -1,0 +1,6 @@
+c:\users\asus\documents\visual studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\bin\n8911371WarehouseService.dll.config
+c:\users\asus\documents\visual studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\bin\n8911371WarehouseService.dll
+c:\users\asus\documents\visual studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\bin\n8911371WarehouseService.pdb
+c:\users\asus\documents\visual studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\obj\Debug\n8911371WarehouseService.dll
+c:\users\asus\documents\visual studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\obj\Debug\n8911371WarehouseService.pdb
+C:\Users\ASUS\Documents\Visual Studio 2013\Projects\n8911371WarehouseService\n8911371WarehouseService\obj\Debug\n8911371WarehouseService.csprojResolveAssemblyReference.cache
