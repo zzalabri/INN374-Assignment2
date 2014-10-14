@@ -3,8 +3,3 @@ C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\bin\
 C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\bin\Assignment2.pdb
 C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\obj\Debug\Assignment2.dll
 C:\Users\ASUS\Documents\Visual Studio 2013\Projects\Assignment2\Assignment2\obj\Debug\Assignment2.pdb
-C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8911371WarehouseAnsSupplier\Assignment2\Assignment2\bin\Assignment2.dll
-C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8911371WarehouseAnsSupplier\Assignment2\Assignment2\bin\Assignment2.pdb
-C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8911371WarehouseAnsSupplier\Assignment2\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache
-C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8911371WarehouseAnsSupplier\Assignment2\Assignment2\obj\Debug\Assignment2.dll
-C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8911371WarehouseAnsSupplier\Assignment2\Assignment2\obj\Debug\Assignment2.pdb
