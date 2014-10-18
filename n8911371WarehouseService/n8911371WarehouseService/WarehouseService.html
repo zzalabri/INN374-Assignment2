@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>n8911371 Warehouse Service Description</title>
+</head>
+<body>
+<pre>
+Service name : n8911371WarehouseService
+Developers : Chen-I Fang (n8911371)
+The purpose of the service : This webservice provides 8 methods to access the Warehouse Database server (MySQL Server).
+Database Server : fastapps04.qut.edu.au
+Database Account : n8911371
+Database Table : Warehouse
+HTML URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.html"> http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.html </a> 
+Service URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc"> http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc </a> 
+WSDL URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?wsdl"> http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?wsdl </a> 
+
+8 public methods descript
+ 
+1. bool IsExistComponentNo(string componentNo)
+   Function Description : To check the componentNo which exists in the Warehouse table.
+            If return true, this means the componentNo exists in the Warehouse table.
+            If return false, the means the componentNo does not exist in the Warehouse table.
+			
+2. string GetComponentName(String componentNo)
+   Function Description : To get one ComponentName record from the Warehouse table while the input data is the componentNo.
+            If no record, the return value is the empty string.
+        
+3. int GetCost(String componentNo)
+   Function Description : To get one Cost record from the Warehouse table while the input the componentNo.
+            If no record, the return value is 0.
+        
+4. int GetAmount(String componentNo)
+   Function Description : To get the current Amount record from the Warehouse table while the input data is the componentNo.
+            If no record, the return value is 0.
+
+5. Warehouse GetComponent(String componentNo)
+   Function Description : To get the whole Warehouse record from the Warehouse table while the input data is the componentNo. 
+            The return type is Warehouse whcih has 4 different values.
+            (1) componentNo : If no record, the return value is the empty string.
+            (2) ComponentName : If no record, the return value is the empty string.
+            (3) Cost : If no record, the return value is 0.
+            (4) Amount : If no record, the return value is 0.
+        
+6. bool CheckAmount(string componentNo, int exceptUsedAmount)
+   Function Description : To check the current amount from the Warehouse table which can offer enough amount for the special componentNo.
+            If return true, this means the warehouse can provide the componentNo with the number of exceptUsedAmount.
+            If return false, the means the warehouse cannot provide the componentNo with the number of exceptUsedAmount.
+        
+7. bool ConsumedAmount(string componentNo, int exceptConsumedAmount)
+   Function Description : To decrease the amount from the Warehouse table with the specific componentNo and the number of exceptConsumedAmount.
+            If return true, the warehouse is successful to decrease the number of exceptConsumedAmount with the specific componentNo.
+            If return false, the warehouse fails to decrease the number of exceptConsumedAmount with the specific componentNo.
+
+8. bool UpdatedAmount(string componentNo, int updatedAmount)
+   Function Description : To increase the amount from the Warehouse table with the specific componentNo and the number of exceptConsumedAmount.
+            If return true, the warehouse is successful to increase the number of updatedAmount to the Warehouse table with the specific componentNo.
+            If return false, the warehouse fails to increase the number of updatedAmount to the Warehouse table with the specific componentNo.
+
+Constraints
+
+1. The length of the componentNo must be 5, such as 100000. If the value is empty or the null vlaue, each method will not get any record and the return value will be  the empty string or 0 based on different methods.
+        
+2. The number of exceptUsedAmount, exceptConsumedAmount and updatedAmount must be over 0. If below 1, the CheckAmount, ConsumedAmount, and UpdatedAmount methods will return the false value.
+</pre>
+</body>
+</html>
