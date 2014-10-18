@@ -3,3 +3,8 @@ C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\n8964955_InsuranceWS\n896495
 C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.csprojResolveAssemblyReference.cache
 C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.dll
 C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.pdb
+C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\n8964955_InsuranceWS\bin\n8964955_InsuranceWS.dll
+C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\n8964955_InsuranceWS\bin\n8964955_InsuranceWS.pdb
+C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.csprojResolveAssemblyReference.cache
+C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.dll
+C:\Users\Zahran\Google Drive\QUT\INN374\Assignment2\INN374-Assignment2\n8964955_InsuranceWS\n8964955_InsuranceWS\n8964955_InsuranceWS\obj\Debug\n8964955_InsuranceWS.pdb
