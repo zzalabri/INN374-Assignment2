@@ -134,6 +134,39 @@ namespace n8911371SupplierService
             return amount;
         }
 
+        public int GetDelayDay(string componentNo)
+        {
+            int delayDay = 0;
+            int currentAmount = GetAmount(componentNo);
+
+            if (componentNo.Equals("10000") && currentAmount < 50)
+            {
+                delayDay = 6;
+            }
+            else if (componentNo.Equals("10000") && currentAmount >= 50)
+            {
+                delayDay = 4;
+            }
+            else if (componentNo.Equals("20000") && currentAmount < 100)
+            {
+                delayDay = 7;
+            }
+            else if (componentNo.Equals("20000") && currentAmount >= 100)
+            {
+                delayDay = 5;
+            }
+            else if (componentNo.Equals("30000") && currentAmount < 200)
+            {
+                delayDay = 9;
+            }
+            else if (componentNo.Equals("30000") && currentAmount >= 200)
+            {
+                delayDay = 3;
+            }
+
+            return delayDay;
+        }
+
         public bool CheckAmount(string componentNo, int exceptOrderAmount)
         {
             bool isEnoughAmount = false;// check the amount state
@@ -239,5 +272,8 @@ namespace n8911371SupplierService
 
             return checkValue;
         }
+
+
+       
     }
 }

@@ -9,7 +9,7 @@
  <pre>
 Service name : n8911371SupplierService
 Developers : Chen-I Fang (n8911371)
-The purpose of the service : This web service provides 6 methods to access the Supplier Database server (MySQL Server).
+The purpose of the service : This web service provides 7 methods to access the Supplier Database server (MySQL Server).
 Program language : C# with WCF to develop the Supplier Web Service
 Database Server : fastapps04.qut.edu.au
 Database Account : n8911371
@@ -19,7 +19,7 @@ HTML URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371Sup
 Service URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc"> http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc </a>  
 WSDL URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc?wsdl"> http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc?wsdl </a> 
 
-6 public method descriptions
+7 public method descriptions
 
 1. bool IsExistComponentNo(string componentNo)
    Function Description : To check the componentNo which exists in the Supplier table.
@@ -37,13 +37,17 @@ WSDL URL : <a href="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371Sup
 4. int GetAmount(String componentNo)
    Function Description : To get the current Amount record from the Supplier table while the input data is the componentNo.
             If no record, the return value is 0.
-        
-5. bool CheckAmount(string componentNo, int exceptOrderAmount)
+
+5. int GetDelayDay(String componentNo)
+   Function Description : To get a delay day based on different componentNo and current amount
+            If no record, the return value is 0.
+     
+6. bool CheckAmount(string componentNo, int exceptOrderAmount)
    Function Description : To check the current amount from the Supplier table which can offer enough amount for the special componentNo.
             If return true, this means the supplier can provide the componentNo with the number of exceptOrderAmount.
             If return false, the means the supplier can provide the componentNo with the number of exceptOrderAmount and return value is 0.
         
-6. bool OrderAmount(string componentNo, int orderAmount)
+7. bool OrderAmount(string componentNo, int orderAmount)
    Function Description : To get the amount from the Supplier table with the specific componentNo and the number of orderAmount.
             If return true, the order is successful to order the number of orderAmount with the specific componentNo.
             If return false, the order fails to order the number of orderAmount with the specific componentNo.

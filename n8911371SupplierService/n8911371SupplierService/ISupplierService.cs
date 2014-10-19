@@ -24,6 +24,9 @@ namespace n8911371SupplierService
         int GetAmount(String componentNo);
 
         [OperationContract]
+        int GetDelayDay(String componentNo);
+
+        [OperationContract]
         bool CheckAmount(string componentNo, int exceptOrderAmount);
 
         [OperationContract]
