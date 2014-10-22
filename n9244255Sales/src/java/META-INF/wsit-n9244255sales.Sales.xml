@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Sales" targetNamespace="http://sales/" xmlns:tns="http://sales/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" 
+ >
+    <message name="request"/>
+    <message name="requestResponse"/>
+    <message name="acceptQuote"/>
+    <message name="acceptQuoteResponse"/>
+    <message name="reject"/>
+    <message name="rejectResponse"/>
+    <message name="acceptDelay"/>
+    <message name="acceptDelayResponse"/>
+    <portType name="Sales">
+        <operation name="request">
+            <input message="tns:request"/>
+            <output message="tns:requestResponse"/>
+        </operation>
+        <operation name="acceptQuote">
+            <input message="tns:acceptQuote"/>
+            <output message="tns:acceptQuoteResponse"/>
+        </operation>
+        <operation name="reject">
+            <input message="tns:reject"/>
+            <output message="tns:rejectResponse"/>
+        </operation>
+        <operation name="acceptDelay">
+            <input message="tns:acceptDelay"/>
+            <output message="tns:acceptDelayResponse"/>
+        </operation>
+    </portType>
+    <binding name="SalesPortBinding" type="tns:Sales">
+        <wsp:PolicyReference URI="#SalesPortBindingPolicy"/>
+        <operation name="request">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="acceptQuote">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="reject">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="acceptDelay">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="Sales">
+        <port name="SalesPort" binding="tns:SalesPortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="SalesPortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="SalesPortBinding_inStock_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="SalesPortBinding_inStock_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

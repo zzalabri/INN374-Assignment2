@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://n9244255sales/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://n9244255sales/">
+
+<xs:element name="acceptDelay" type="tns:acceptDelay"/>
+
+<xs:element name="acceptDelayResponse" type="tns:acceptDelayResponse"/>
+
+<xs:element name="acceptQuote" type="tns:acceptQuote"/>
+
+<xs:element name="acceptQuoteResponse" type="tns:acceptQuoteResponse"/>
+
+<xs:element name="reject" type="tns:reject"/>
+
+<xs:element name="rejectResponse" type="tns:rejectResponse"/>
+
+<xs:element name="request" type="tns:request"/>
+
+<xs:element name="requestResponse" type="tns:requestResponse"/>
+
+<xs:complexType name="request">
+<xs:sequence>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="address" type="xs:string" minOccurs="0"/>
+<xs:element name="phoneNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="model" type="xs:string" minOccurs="0"/>
+<xs:element name="plateNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="requestResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:workOrder" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="workOrder">
+<xs:sequence>
+<xs:element name="state" type="tns:state" minOccurs="0"/>
+<xs:element name="appointment" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="delay" type="xs:int"/>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="plateNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="quote" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acceptDelay">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acceptDelayResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="reject">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rejectResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="acceptQuote">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="acceptQuoteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:workOrder" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="state">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Quote"/>
+<xs:enumeration value="Delay"/>
+<xs:enumeration value="Appointment"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

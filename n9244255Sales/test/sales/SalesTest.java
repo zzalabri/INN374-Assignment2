@@ -1,5 +1,6 @@
 package sales;
 
+import n9244255sales.Sales;
 import javax.ejb.embeddable.EJBContainer;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -7,9 +8,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import sales.data.Customer;
-import sales.data.State;
-import sales.data.WorkOrder;
+import n9244255sales.data.Customer;
+import n9244255sales.data.State;
+import n9244255sales.data.WorkOrder;
 
 /**
  *
