@@ -6,6 +6,7 @@
 
 package sales;
 
+import n9244255sales.ResourcePlanner;
 import java.util.UUID;
 import javax.ejb.embeddable.EJBContainer;
 import org.junit.After;

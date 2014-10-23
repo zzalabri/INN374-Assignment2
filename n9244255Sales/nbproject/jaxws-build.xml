@@ -17,16 +17,16 @@
             <classpath path="${j2ee.platform.wsgen.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsgen-compile" depends="wsgen-Sales, wsgen-ResourcePlanner">
+    <target name="wsgen-compile" depends="wsgen-ResourcePlanner, wsgen-Sales">
         <ejbjarproject2:javac srcdir="${build.generated.sources.dir}/jax-ws" classpath="${j2ee.platform.wsgen.classpath}:${javac.classpath}" destdir="${classes.dir}"/>
     </target>
-    <target name="wsgen-Sales" depends="wsgen-init, -do-compile">
-        <wsgen destdir="${build.generated.sources.dir}/jax-ws" sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" verbose="true" xendorsed="true" keep="false" genwsdl="true" sei="sales.Sales">
+    <target name="wsgen-ResourcePlanner" depends="wsgen-init, -do-compile">
+        <wsgen destdir="${build.generated.sources.dir}/jax-ws" sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" verbose="true" xendorsed="true" keep="false" genwsdl="true" sei="n9244255sales.ResourcePlanner">
             <classpath path="${java.home}/../lib/tools.jar:${classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
-    <target name="wsgen-ResourcePlanner" depends="wsgen-init, -do-compile">
-        <wsgen destdir="${build.generated.sources.dir}/jax-ws" sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" verbose="true" xendorsed="true" keep="false" genwsdl="true" sei="sales.ResourcePlanner">
+    <target name="wsgen-Sales" depends="wsgen-init, -do-compile">
+        <wsgen destdir="${build.generated.sources.dir}/jax-ws" sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" verbose="true" xendorsed="true" keep="false" genwsdl="true" sei="n9244255sales.Sales">
             <classpath path="${java.home}/../lib/tools.jar:${classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
@@ -35,4 +35,65 @@
                 JAX-WS WSIMPORT SECTION
                 ===================
             -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <mkdir dir="${classes.dir}"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${j2ee.platform.wsimport.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-insurance" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/insurance"/>
+        <property name="wsdl-insurance" location="${meta.inf}/xml-resources/web-service-references/insurance/wsdl/fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc.singlewsdl.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/insurance" destdir="${build.generated.dir}/jax-wsCache/insurance" wsdl="${wsdl-insurance}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc?singleWsdl" xnocompile="true" xendorsed="true" package="n9244255sales.insurance">
+            <depends file="${wsdl-insurance}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/insurance"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/insurance">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-insurance" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/insurance"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/n9244255sales/insurance"/>
+    </target>
+    <target name="wsimport-client-SupplierService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SupplierService"/>
+        <property name="wsdl-SupplierService" location="${meta.inf}/xml-resources/web-service-references/SupplierService/wsdl/fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SupplierService" destdir="${build.generated.dir}/jax-wsCache/SupplierService" wsdl="${wsdl-SupplierService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc?wsdl" xnocompile="true" xendorsed="true" package="n9244255sales.supplier">
+            <depends file="${wsdl-SupplierService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SupplierService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SupplierService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-SupplierService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/SupplierService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/n9244255sales/supplier"/>
+    </target>
+    <target name="wsimport-client-WarehouseService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WarehouseService"/>
+        <property name="wsdl-WarehouseService" location="${meta.inf}/xml-resources/web-service-references/WarehouseService/wsdl/fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WarehouseService" destdir="${build.generated.dir}/jax-wsCache/WarehouseService" wsdl="${wsdl-WarehouseService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?wsdl" xnocompile="true" xendorsed="true" package="n9244255sales.warehouse">
+            <depends file="${wsdl-WarehouseService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WarehouseService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WarehouseService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WarehouseService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WarehouseService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/n9244255sales/warehouse"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-insurance, wsimport-client-SupplierService, wsimport-client-WarehouseService"/>
 </project>

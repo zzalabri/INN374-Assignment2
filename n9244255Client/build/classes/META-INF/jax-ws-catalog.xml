@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://lucidea:8080/Sales/Sales?wsdl" uri="wsdl/lucidea_8080/Sales/Sales.wsdl"/>
+    <system systemId="http://lucidea:8080/Sales/Sales?xsd=1" uri="wsdl/lucidea_8080/Sales/Sales.xsd_1.xsd"/>
+    <system systemId="http://fastws.qut.edu.au:8080/Sales/Sales?wsdl" uri="wsdl/fastws.qut.edu.au_8080/Sales/Sales.wsdl"/>
+    <system systemId="http://fastws.qut.edu.au:8080/Sales/Sales?xsd=1" uri="wsdl/fastws.qut.edu.au_8080/Sales/Sales.xsd_1.xsd"/>
+</catalog>

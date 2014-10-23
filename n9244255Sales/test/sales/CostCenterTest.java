@@ -6,13 +6,14 @@
 
 package sales;
 
+import n9244255sales.CostCenter;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import sales.data.WorkOrder;
+import n9244255sales.data.WorkOrder;
 
 /**
  *

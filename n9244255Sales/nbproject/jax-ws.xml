@@ -1,12 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="Sales">
-      <implementation-class>sales.Sales</implementation-class>
-    </service>
     <service name="ResourcePlanner">
-      <implementation-class>sales.ResourcePlanner</implementation-class>
+      <implementation-class>n9244255sales.ResourcePlanner</implementation-class>
+    </service>
+    <service name="Sales">
+      <implementation-class>n9244255sales.Sales</implementation-class>
     </service>
   </services>
-  <clients/>
+  <clients>
+    <client name="insurance">
+      <wsdl-url>http://fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc?singleWsdl</wsdl-url>
+      <local-wsdl-file>fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc.singlewsdl.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">n9244255sales.insurance</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc?singleWsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>n9244255sales.insurance</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="SupplierService">
+      <wsdl-url>http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc?wsdl</wsdl-url>
+      <local-wsdl-file>fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">n9244255sales.supplier</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://fastapps04.qut.edu.au/n8911371/WebService/n8911371SupplierService/SupplierService.svc?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>n9244255sales.supplier</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="WarehouseService">
+      <wsdl-url>http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?wsdl</wsdl-url>
+      <local-wsdl-file>fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">n9244255sales.warehouse</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>n9244255sales.warehouse</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+  </clients>
 </jax-ws>
