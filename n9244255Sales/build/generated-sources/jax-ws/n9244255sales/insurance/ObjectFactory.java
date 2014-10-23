@@ -28,6 +28,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _IsInsuredPlateNo_QNAME = new QName("http://tempuri.org/", "plateNo");
     private final static QName _AnyURI_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyURI");
     private final static QName _Char_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "char");
     private final static QName _UnsignedByte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedByte");
@@ -49,7 +50,6 @@ public class ObjectFactory {
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
     private final static QName _UnsignedLong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedLong");
     private final static QName _Boolean_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "boolean");
-    private final static QName _GetDiscountPlateNo_QNAME = new QName("http://tempuri.org/", "plateNo");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: n9244255sales.insurance
@@ -88,6 +88,15 @@ public class ObjectFactory {
      */
     public IsInsured createIsInsured() {
         return new IsInsured();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "plateNo", scope = IsInsured.class)
+    public JAXBElement<String> createIsInsuredPlateNo(String value) {
+        return new JAXBElement<String>(_IsInsuredPlateNo_QNAME, String.class, IsInsured.class, value);
     }
 
     /**
@@ -285,16 +294,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "plateNo", scope = GetDiscount.class)
     public JAXBElement<String> createGetDiscountPlateNo(String value) {
-        return new JAXBElement<String>(_GetDiscountPlateNo_QNAME, String.class, GetDiscount.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "plateNo", scope = IsInsured.class)
-    public JAXBElement<String> createIsInsuredPlateNo(String value) {
-        return new JAXBElement<String>(_GetDiscountPlateNo_QNAME, String.class, IsInsured.class, value);
+        return new JAXBElement<String>(_IsInsuredPlateNo_QNAME, String.class, GetDiscount.class, value);
     }
 
 }

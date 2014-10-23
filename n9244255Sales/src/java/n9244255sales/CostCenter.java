@@ -1,11 +1,11 @@
 package n9244255sales;
 
 import n9244255sales.data.CarModel;
-import n9244255sales.data.Customer;
 import n9244255sales.data.WorkOrder;
 import n9244255sales.insurance.Insurance;
 import n9244255sales.warehouse.IWarehouseService;
 import n9244255sales.warehouse.WarehouseService;
+import n9244255sales.warehouse.Warehouse;
 
 /**
  * The cost center is a part of the sales department. It calculates costs and
@@ -18,8 +18,7 @@ import n9244255sales.warehouse.WarehouseService;
 public class CostCenter {
 
     public static int getQuote(WorkOrder wo) {
-        Customer cust = CentralDataStore.customers.get(wo.getPlateNumber());
-        CarModel model = new CarModel(cust.getModel());
+        CarModel model = new CarModel(CentralDataStore.customers.get(wo.getPlateNumber()).getModel());
         // TODO: request warehouse costs
         int warehouseCosts = 0;
         WarehouseService warehouse = new WarehouseService();
@@ -37,7 +36,7 @@ public class CostCenter {
         int discount = ins.getBasicHttpBindingIinsurance().getDiscount(wo.getPlateNumber());
         
 
-        int quote = new Float(totalCosts * (100.0- 1.0*discount)/100).intValue();
+        int quote = new Float((totalCosts * 1.0 / discount)).intValue();
 
         return quote;
     }

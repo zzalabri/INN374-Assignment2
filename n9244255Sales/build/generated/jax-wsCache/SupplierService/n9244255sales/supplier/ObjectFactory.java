@@ -49,7 +49,7 @@ public class ObjectFactory {
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
     private final static QName _UnsignedLong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedLong");
     private final static QName _Boolean_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "boolean");
-    private final static QName _OrderAmountComponentNo_QNAME = new QName("http://tempuri.org/", "componentNo");
+    private final static QName _GetAmountComponentNo_QNAME = new QName("http://tempuri.org/", "componentNo");
     private final static QName _GetComponentNameResponseGetComponentNameResult_QNAME = new QName("http://tempuri.org/", "GetComponentNameResult");
 
     /**
@@ -364,27 +364,9 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = OrderAmount.class)
-    public JAXBElement<String> createOrderAmountComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, OrderAmount.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponentName.class)
-    public JAXBElement<String> createGetComponentNameComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, GetComponentName.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetAmount.class)
     public JAXBElement<String> createGetAmountComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, GetAmount.class, value);
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, GetAmount.class, value);
     }
 
     /**
@@ -393,7 +375,25 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetDelayDay.class)
     public JAXBElement<String> createGetDelayDayComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, GetDelayDay.class, value);
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, GetDelayDay.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetCost.class)
+    public JAXBElement<String> createGetCostComponentNo(String value) {
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, GetCost.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = IsExistComponentNo.class)
+    public JAXBElement<String> createIsExistComponentNoComponentNo(String value) {
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, IsExistComponentNo.class, value);
     }
 
     /**
@@ -409,18 +409,9 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = IsExistComponentNo.class)
-    public JAXBElement<String> createIsExistComponentNoComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, IsExistComponentNo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetCost.class)
-    public JAXBElement<String> createGetCostComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, GetCost.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponentName.class)
+    public JAXBElement<String> createGetComponentNameComponentNo(String value) {
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, GetComponentName.class, value);
     }
 
     /**
@@ -429,7 +420,16 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = CheckAmount.class)
     public JAXBElement<String> createCheckAmountComponentNo(String value) {
-        return new JAXBElement<String>(_OrderAmountComponentNo_QNAME, String.class, CheckAmount.class, value);
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, CheckAmount.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = OrderAmount.class)
+    public JAXBElement<String> createOrderAmountComponentNo(String value) {
+        return new JAXBElement<String>(_GetAmountComponentNo_QNAME, String.class, OrderAmount.class, value);
     }
 
 }
