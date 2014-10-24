@@ -17,7 +17,7 @@ import n9244255sales.warehouse.WarehouseService;
  *
  * @author Manuel Brauer
  */
-@WebService(serviceName = "ResourcePlanner")
+@WebService(serviceName = "n9244255ResourcePlanner")
 @Stateless()
 public class ResourcePlanner {
 

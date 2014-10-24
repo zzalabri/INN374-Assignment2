@@ -17,7 +17,7 @@ import n9244255sales.supplier.SupplierService;
  *
  * @author Manuel Brauer
  */
-@WebService(serviceName = "Sales")
+@WebService(serviceName = "n9244255Sales")
 @Stateless()
 public class Sales {
 

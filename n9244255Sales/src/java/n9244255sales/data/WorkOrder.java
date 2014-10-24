@@ -63,7 +63,7 @@ public class WorkOrder {
     }
 
     public void setDelay(int i) {
-        if (State.Quote.equals(state) && delay < 0 && i >= 0) {
+        if (State.Quote.equals(state) && i >= 0) {
             delay = i;
             state = State.Delay;
         }

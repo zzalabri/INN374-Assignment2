@@ -42,6 +42,18 @@ public interface Sales {
     /**
      * 
      * @param id
+     */
+    @WebMethod
+    @RequestWrapper(localName = "reject", targetNamespace = "http://n9244255sales/", className = "n9244255client.sales.Reject")
+    @ResponseWrapper(localName = "rejectResponse", targetNamespace = "http://n9244255sales/", className = "n9244255client.sales.RejectResponse")
+    @Action(input = "http://n9244255sales/Sales/rejectRequest", output = "http://n9244255sales/Sales/rejectResponse")
+    public void reject(
+        @WebParam(name = "id", targetNamespace = "")
+        String id);
+
+    /**
+     * 
+     * @param id
      * @return
      *     returns n9244255client.sales.WorkOrder
      */
@@ -51,18 +63,6 @@ public interface Sales {
     @ResponseWrapper(localName = "acceptQuoteResponse", targetNamespace = "http://n9244255sales/", className = "n9244255client.sales.AcceptQuoteResponse")
     @Action(input = "http://n9244255sales/Sales/acceptQuoteRequest", output = "http://n9244255sales/Sales/acceptQuoteResponse")
     public WorkOrder acceptQuote(
-        @WebParam(name = "id", targetNamespace = "")
-        String id);
-
-    /**
-     * 
-     * @param id
-     */
-    @WebMethod
-    @RequestWrapper(localName = "reject", targetNamespace = "http://n9244255sales/", className = "n9244255client.sales.Reject")
-    @ResponseWrapper(localName = "rejectResponse", targetNamespace = "http://n9244255sales/", className = "n9244255client.sales.RejectResponse")
-    @Action(input = "http://n9244255sales/Sales/rejectRequest", output = "http://n9244255sales/Sales/rejectResponse")
-    public void reject(
         @WebParam(name = "id", targetNamespace = "")
         String id);
 

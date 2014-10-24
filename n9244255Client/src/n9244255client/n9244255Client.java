@@ -5,8 +5,9 @@
  */
 package n9244255client;
 
+import n9244255client.garage.N8964955GarageWS;
 import n9244255client.sales.Customer;
-import n9244255client.sales.Sales_Service;
+import n9244255client.sales.N9244255Sales;
 import n9244255client.sales.WorkOrder;
 
 /**
@@ -55,6 +56,8 @@ public class n9244255Client extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,8 +88,6 @@ public class n9244255Client extends javax.swing.JFrame {
 
         jLabel6.setText("Delay:");
 
-        jLabel7.setText("jLabel7");
-
         jButton2.setText("Accept");
         jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -102,10 +103,6 @@ public class n9244255Client extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        jLabel8.setText("jLabel8");
-
-        jLabel9.setText("jLabel9");
 
         jButton4.setText("Reject");
         jButton4.setEnabled(false);
@@ -137,6 +134,8 @@ public class n9244255Client extends javax.swing.JFrame {
 
         jLabel12.setText("Phone:");
 
+        jLabel13.setText("Appointment:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -145,27 +144,31 @@ public class n9244255Client extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel9)))
-                            .addComponent(jLabel6))
+                        .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton4))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jButton3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton5))))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel6)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -186,7 +189,7 @@ public class n9244255Client extends javax.swing.JFrame {
                             .addComponent(jTextField1)
                             .addComponent(jTextField2)
                             .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,18 +223,24 @@ public class n9244255Client extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel5)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(jButton2)
+                        .addComponent(jButton4))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(jButton3)
+                        .addComponent(jButton5))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel6)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5))
-                .addContainerGap(28, Short.MAX_VALUE))
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
@@ -242,15 +251,13 @@ public class n9244255Client extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("Plate: "+jComboBox2.getSelectedItem().toString());
-        System.out.println("Model: "+jComboBox3.getSelectedItem().toString());
         Customer customer = new Customer();
         customer.setName(jTextField1.getText());
         customer.setAddress(jTextField2.getText());
         customer.setPhoneNumber(jTextField3.getText());
         customer.setPlateNumber(jComboBox2.getSelectedItem().toString());
         customer.setModel(jComboBox3.getSelectedItem().toString());
-        Sales_Service sales = new Sales_Service();
+        N9244255Sales sales = new N9244255Sales();
 
         WorkOrder wo = sales.getSalesPort().request(customer);
         if (wo == null) {
@@ -259,11 +266,13 @@ public class n9244255Client extends javax.swing.JFrame {
         currentWorkOrder = wo;
         jLabel7.setText(wo.getId());
         jLabel8.setText("$" + wo.getQuote());
+        jLabel9.setText("");
+        jLabel14.setText("");
         enableButtons(true, false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Sales_Service sales = new Sales_Service();
+        N9244255Sales sales = new N9244255Sales();
         WorkOrder wo = sales.getSalesPort().acceptQuote(currentWorkOrder.getId());
         if (wo == null) {
             return;
@@ -281,9 +290,12 @@ public class n9244255Client extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Sales_Service sales = new Sales_Service();
+        N9244255Sales sales = new N9244255Sales();
         sales.getSalesPort().acceptDelay(currentWorkOrder.getId());
         // TODO: request Appointment
+        N8964955GarageWS garage = new N8964955GarageWS();
+        String app = garage.getBasicHttpBindingIn8964955GarageWS().getAppointment(currentWorkOrder.getPlateNumber());
+        jLabel14.setText(app);
         enableButtons(false, false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -292,21 +304,23 @@ public class n9244255Client extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void reject() {
-        Sales_Service sales = new Sales_Service();
+        N9244255Sales sales = new N9244255Sales();
         sales.getSalesPort().reject(currentWorkOrder.getId());
         currentWorkOrder = null;
         jLabel7.setText("");
         jLabel8.setText("");
         jLabel9.setText("");
+        jLabel14.setText("");
         enableButtons(false, false);
     }
 
-    private void enableButtons(boolean quote, boolean delay){
+    private void enableButtons(boolean quote, boolean delay) {
         jButton2.setEnabled(quote);
         jButton4.setEnabled(quote);
         jButton3.setEnabled(delay);
         jButton5.setEnabled(delay);
     }
+
     /**
      * @param args the command line arguments
      */
@@ -354,6 +368,8 @@ public class n9244255Client extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

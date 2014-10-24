@@ -2,9 +2,45 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
+    <client name="n8964955-GarageWS">
+      <wsdl-url>http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl</wsdl-url>
+      <local-wsdl-file>fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc.singlewsdl.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">n9244255client.garage</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>n9244255client.garage</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
     <client name="Sales">
-      <wsdl-url>http://fastws.qut.edu.au:8080/Sales/Sales?wsdl</wsdl-url>
-      <local-wsdl-file>fastws.qut.edu.au_8080/Sales/Sales.wsdl</local-wsdl-file>
+      <wsdl-url>http://fastws.qut.edu.au:8080/n9244255Sales/Sales?wsdl</wsdl-url>
+      <local-wsdl-file>fastws.qut.edu.au_8080/n9244255Sales/Sales.wsdl</local-wsdl-file>
       <package-name forceReplace="true">n9244255client.sales</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -22,7 +58,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://fastws.qut.edu.au:8080/Sales/Sales?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://fastws.qut.edu.au:8080/n9244255Sales/Sales?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

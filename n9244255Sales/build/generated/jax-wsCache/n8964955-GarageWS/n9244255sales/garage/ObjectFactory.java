@@ -50,8 +50,8 @@ public class ObjectFactory {
     private final static QName _UnsignedLong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedLong");
     private final static QName _Boolean_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "boolean");
     private final static QName _GetAppointmentPlateNo_QNAME = new QName("http://tempuri.org/", "plateNo");
-    private final static QName _GetAppointmentResponseGetAppointmentResult_QNAME = new QName("http://tempuri.org/", "getAppointmentResult");
     private final static QName _GetCostCarModel_QNAME = new QName("http://tempuri.org/", "carModel");
+    private final static QName _GetAppointmentResponseGetAppointmentResult_QNAME = new QName("http://tempuri.org/", "getAppointmentResult");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: n9244255sales.garage
@@ -310,6 +310,15 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "carModel", scope = GetCost.class)
+    public JAXBElement<String> createGetCostCarModel(String value) {
+        return new JAXBElement<String>(_GetCostCarModel_QNAME, String.class, GetCost.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "plateNo", scope = SetAppointment.class)
     public JAXBElement<String> createSetAppointmentPlateNo(String value) {
         return new JAXBElement<String>(_GetAppointmentPlateNo_QNAME, String.class, SetAppointment.class, value);
@@ -322,15 +331,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "getAppointmentResult", scope = GetAppointmentResponse.class)
     public JAXBElement<String> createGetAppointmentResponseGetAppointmentResult(String value) {
         return new JAXBElement<String>(_GetAppointmentResponseGetAppointmentResult_QNAME, String.class, GetAppointmentResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "carModel", scope = GetCost.class)
-    public JAXBElement<String> createGetCostCarModel(String value) {
-        return new JAXBElement<String>(_GetCostCarModel_QNAME, String.class, GetCost.class, value);
     }
 
 }
