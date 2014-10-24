@@ -1,5 +1,0 @@
-c:\users\asus\documents\visual studio 2013\Projects\WarehouseService\WarehouseService\bin\WarehouseService.dll.config
-c:\users\asus\documents\visual studio 2013\Projects\WarehouseService\WarehouseService\bin\WarehouseService.dll
-c:\users\asus\documents\visual studio 2013\Projects\WarehouseService\WarehouseService\bin\WarehouseService.pdb
-c:\users\asus\documents\visual studio 2013\Projects\WarehouseService\WarehouseService\obj\Debug\WarehouseService.dll
-c:\users\asus\documents\visual studio 2013\Projects\WarehouseService\WarehouseService\obj\Debug\WarehouseService.pdb

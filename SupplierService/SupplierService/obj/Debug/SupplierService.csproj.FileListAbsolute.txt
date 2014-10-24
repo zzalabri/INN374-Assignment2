@@ -1,6 +1,0 @@
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\bin\SupplierService.dll.config
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\bin\SupplierService.dll
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\bin\SupplierService.pdb
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\obj\Debug\SupplierService.csprojResolveAssemblyReference.cache
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\obj\Debug\SupplierService.dll
-c:\users\asus\documents\visual studio 2013\Projects\SupplierService\SupplierService\obj\Debug\SupplierService.pdb
