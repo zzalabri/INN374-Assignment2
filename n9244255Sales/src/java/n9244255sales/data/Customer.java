@@ -34,9 +34,7 @@ public class Customer {
     }
 
     public void setPlateNumber(String plateNumber) {
-        if (plateNumber == null) {
-            this.plateNumber = plateNumber;
-        }
+        this.plateNumber = plateNumber;
     }
 
     public void setModel(String model) {

@@ -1,11 +1,12 @@
 package n9244255sales;
 
 import n9244255sales.data.CarModel;
+import n9244255sales.data.Customer;
 import n9244255sales.data.WorkOrder;
+import n9244255sales.garage.N8964955GarageWS;
 import n9244255sales.insurance.Insurance;
 import n9244255sales.warehouse.IWarehouseService;
 import n9244255sales.warehouse.WarehouseService;
-import n9244255sales.warehouse.Warehouse;
 
 /**
  * The cost center is a part of the sales department. It calculates costs and
@@ -18,7 +19,8 @@ import n9244255sales.warehouse.Warehouse;
 public class CostCenter {
 
     public static int getQuote(WorkOrder wo) {
-        CarModel model = new CarModel(CentralDataStore.customers.get(wo.getPlateNumber()).getModel());
+        Customer cust = CentralDataStore.customers.get(wo.getPlateNumber());
+        CarModel model = new CarModel(cust.getModel());
         // TODO: request warehouse costs
         int warehouseCosts = 0;
         WarehouseService warehouse = new WarehouseService();
@@ -27,7 +29,8 @@ public class CostCenter {
         warehouseCosts += proxy.getCost("20000")*model.getAmount("20000");
         warehouseCosts += proxy.getCost("30000")*model.getAmount("30000");
         // TODO: request garage costs
-        int garageCosts = 25;
+        N8964955GarageWS garage = new N8964955GarageWS();
+        int garageCosts = garage.getBasicHttpBindingIn8964955GarageWS().getCost(cust.getModel());
 
         int totalCosts = warehouseCosts + garageCosts;
 
@@ -36,7 +39,7 @@ public class CostCenter {
         int discount = ins.getBasicHttpBindingIinsurance().getDiscount(wo.getPlateNumber());
         
 
-        int quote = new Float((totalCosts * 1.0 / discount)).intValue();
+        int quote = new Float(totalCosts * (100.0- 1.0*discount)/100).intValue();
 
         return quote;
     }

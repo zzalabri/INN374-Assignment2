@@ -18,4 +18,5 @@
     <system systemId="http://fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc?xsd=xsd2" uri="wsdl/fastapps04.qut.edu.au/n8911371/WebService/n8911371WarehouseService/WarehouseService.svc.xsd_xsd2.xsd"/>
     <system systemId="file:/C:/Users/Ulme/Documents/GitHub/INN374-Assignment2/n8964955_InsuranceWS/insurance.wsdl" uri="wsdl/insurance.wsdl"/>
     <system systemId="http://fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc?singleWsdl" uri="wsdl/fastapps04.qut.edu.au/n8964955/n8964955_InsuranceWS/insurance.svc.singlewsdl.wsdl"/>
+    <system systemId="http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl" uri="wsdl/fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc.singlewsdl.wsdl"/>
 </catalog>

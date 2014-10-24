@@ -95,5 +95,22 @@
         <delete dir="${build.generated.dir}/jax-wsCache/WarehouseService"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/n9244255sales/warehouse"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-insurance, wsimport-client-SupplierService, wsimport-client-WarehouseService"/>
+    <target name="wsimport-client-n8964955-GarageWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS"/>
+        <property name="wsdl-n8964955-GarageWS" location="${meta.inf}/xml-resources/web-service-references/n8964955-GarageWS/wsdl/fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc.singlewsdl.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS" destdir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS" wsdl="${wsdl-n8964955-GarageWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl" xnocompile="true" xendorsed="true" package="n9244255sales.garage">
+            <depends file="${wsdl-n8964955-GarageWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-n8964955-GarageWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/n8964955-GarageWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/n9244255sales/garage"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-insurance, wsimport-client-SupplierService, wsimport-client-WarehouseService, wsimport-client-n8964955-GarageWS"/>
 </project>

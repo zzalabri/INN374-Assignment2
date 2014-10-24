@@ -28,7 +28,6 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetComponentComponentNo_QNAME = new QName("http://tempuri.org/", "componentNo");
     private final static QName _AnyURI_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyURI");
     private final static QName _Char_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "char");
     private final static QName _UnsignedByte_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedByte");
@@ -51,10 +50,11 @@ public class ObjectFactory {
     private final static QName _String_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "string");
     private final static QName _UnsignedLong_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "unsignedLong");
     private final static QName _Boolean_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "boolean");
-    private final static QName _GetComponentNameResponseGetComponentNameResult_QNAME = new QName("http://tempuri.org/", "GetComponentNameResult");
+    private final static QName _CheckAmountComponentNo_QNAME = new QName("http://tempuri.org/", "componentNo");
     private final static QName _WarehouseComponentName_QNAME = new QName("http://schemas.datacontract.org/2004/07/n8911371WarehouseService", "componentName");
     private final static QName _WarehouseComponentNo_QNAME = new QName("http://schemas.datacontract.org/2004/07/n8911371WarehouseService", "componentNo");
     private final static QName _GetComponentResponseGetComponentResult_QNAME = new QName("http://tempuri.org/", "GetComponentResult");
+    private final static QName _GetComponentNameResponseGetComponentNameResult_QNAME = new QName("http://tempuri.org/", "GetComponentNameResult");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: n9244255sales.warehouse
@@ -197,15 +197,6 @@ public class ObjectFactory {
      */
     public CheckAmount createCheckAmount() {
         return new CheckAmount();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponent.class)
-    public JAXBElement<String> createGetComponentComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, GetComponent.class, value);
     }
 
     /**
@@ -410,45 +401,18 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = UpdatedAmount.class)
-    public JAXBElement<String> createUpdatedAmountComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, UpdatedAmount.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = CheckAmount.class)
+    public JAXBElement<String> createCheckAmountComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, CheckAmount.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = ConsumedAmount.class)
-    public JAXBElement<String> createConsumedAmountComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, ConsumedAmount.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetComponentNameResult", scope = GetComponentNameResponse.class)
-    public JAXBElement<String> createGetComponentNameResponseGetComponentNameResult(String value) {
-        return new JAXBElement<String>(_GetComponentNameResponseGetComponentNameResult_QNAME, String.class, GetComponentNameResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetAmount.class)
-    public JAXBElement<String> createGetAmountComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, GetAmount.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetCost.class)
-    public JAXBElement<String> createGetCostComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, GetCost.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponentName.class)
+    public JAXBElement<String> createGetComponentNameComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, GetComponentName.class, value);
     }
 
     /**
@@ -470,6 +434,24 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = UpdatedAmount.class)
+    public JAXBElement<String> createUpdatedAmountComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, UpdatedAmount.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetAmount.class)
+    public JAXBElement<String> createGetAmountComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, GetAmount.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Warehouse }{@code >}}
      * 
      */
@@ -482,27 +464,45 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetComponentNameResult", scope = GetComponentNameResponse.class)
+    public JAXBElement<String> createGetComponentNameResponseGetComponentNameResult(String value) {
+        return new JAXBElement<String>(_GetComponentNameResponseGetComponentNameResult_QNAME, String.class, GetComponentNameResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = ConsumedAmount.class)
+    public JAXBElement<String> createConsumedAmountComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, ConsumedAmount.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = IsExistComponentNo.class)
     public JAXBElement<String> createIsExistComponentNoComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, IsExistComponentNo.class, value);
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, IsExistComponentNo.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = CheckAmount.class)
-    public JAXBElement<String> createCheckAmountComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, CheckAmount.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponent.class)
+    public JAXBElement<String> createGetComponentComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, GetComponent.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetComponentName.class)
-    public JAXBElement<String> createGetComponentNameComponentNo(String value) {
-        return new JAXBElement<String>(_GetComponentComponentNo_QNAME, String.class, GetComponentName.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "componentNo", scope = GetCost.class)
+    public JAXBElement<String> createGetCostComponentNo(String value) {
+        return new JAXBElement<String>(_CheckAmountComponentNo_QNAME, String.class, GetCost.class, value);
     }
 
 }

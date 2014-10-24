@@ -59,7 +59,7 @@ public class n9244255Client extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jComboBox2.setEditable(true);
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A123", "B456", "C789" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2120AW", "3456FG", "5678KJ" }));
 
         jComboBox3.setEditable(true);
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Audi A3", "VW Phaeton", "Hyundai i30" }));

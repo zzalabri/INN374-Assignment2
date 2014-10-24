@@ -6,6 +6,8 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.ejb.Stateless;
 import n9244255sales.data.CarModel;
+import n9244255sales.data.WorkOrder;
+import n9244255sales.garage.N8964955GarageWS;
 import n9244255sales.supplier.SupplierService;
 import n9244255sales.warehouse.WarehouseService;
 
@@ -28,7 +30,10 @@ public class ResourcePlanner {
      */
     @WebMethod(operationName = "inStock")
     public void inStock(@WebParam(name = "offerId") String offerId) {
-        // TODO: inform garage
+        WorkOrder wo = CentralDataStore.workorders.get(offerId);
+        N8964955GarageWS garage = new N8964955GarageWS();
+        garage.getBasicHttpBindingIn8964955GarageWS().setAppointment(wo.getPlateNumber());
+        String result = garage.getBasicHttpBindingIn8964955GarageWS().getAppointment(wo.getPlateNumber());
     }
 
     /**

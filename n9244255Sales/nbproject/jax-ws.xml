@@ -117,5 +117,41 @@
         </wsimport-option>
       </wsimport-options>
     </client>
+    <client name="n8964955-GarageWS">
+      <wsdl-url>http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl</wsdl-url>
+      <local-wsdl-file>fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc.singlewsdl.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">n9244255sales.garage</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://fastapps04.qut.edu.au/n8964955/n8964955-GarageWS/n8964955-GarageWS.svc?singleWsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>n9244255sales.garage</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
   </clients>
 </jax-ws>
